@@ -6,6 +6,8 @@ const geoCode = require('./utils/geocode');
 const foreCast = require('./utils/forecast');
 
 const app = express();
+//for heroku listener setings
+const port = process.env.PORT || 3000
 
 //Define paths for express config
 //path.join aponta para o path onde se encontra o html que se pretende utilizar
@@ -92,7 +94,7 @@ app.get('*', (req, res) => {
     })
 })
 
-//Connecta a app no server
-app.listen(3000, () => {
-    console.log('Listening on port 3000')
+//Connecta a app no server do localhost ou heroku
+app.listen(port, () => {
+    console.log('Listening on port' + port)
 });
