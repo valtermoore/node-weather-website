@@ -1,5 +1,5 @@
 
-console.log('Client side JS file');
+//console.log('Client side JS file');
 
 //Fetch the data
 // axios('http://localhost:3000/weather?address=maputo')
