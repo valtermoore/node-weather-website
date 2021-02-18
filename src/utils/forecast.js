@@ -5,7 +5,7 @@ const forecastCode = (address, callback) => {
 
     axios.get(url)
         .then((response) => {
-            callback(undefined, `It is currently ${response.data.main.temp} degrees`);
+            callback(undefined, `It is currently ${response.data.main.temp} degrees. With a max of ${response.data.main.temp_max} and a low of ${response.data.main.temp_min}`);
         })
         .catch((error) => {
             callback(error.response.data.message, undefined)
